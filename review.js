@@ -88,7 +88,24 @@ function scoreHand(hand) {
   }
   else {
     ////print to console, you lose
-    console.log("You are a loser");
+    loserMessage();
+  }
+}
+
+///work on creating a message if the scorehand is a loser
+
+function loserMessage() {
+  switch (Math.floor(Math.random()*2)) {
+    case 1:
+      {console.log("you suck")};
+      break;
+    case 2:
+      {console.log("awful")};
+      break;
+    default:
+      {console.log("try again")};
+      break;
+
   }
 }
 
@@ -97,3 +114,5 @@ console.log("Your hand is: ");
 for (var i = 0; i < hand.length; i++) {
  console.log(hand[i].name);
 }
+
+console.log(scoreHand(hand));
