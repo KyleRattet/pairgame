@@ -1,3 +1,5 @@
+//alert("test");
+
 var deck = [
   { code: "&#x1F0A1", weight: 1, name: "Ace of Spades", suit: "Spades"},
   { code: "&#x1F0A2", weight: 2, name: "Two of Spades", suit: "Spades"},
@@ -116,3 +118,7 @@ for (var i = 0; i < hand.length; i++) {
 }
 
 console.log(scoreHand(hand));
+
+window.onload = function(){
+ document.getElementById("test").innerHTML = hand[0].code + hand[1].code;
+};
